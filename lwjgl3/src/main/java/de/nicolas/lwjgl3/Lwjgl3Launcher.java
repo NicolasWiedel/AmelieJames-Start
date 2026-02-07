@@ -4,6 +4,7 @@ import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application;
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 import de.nicolas.Chapter2;
 import de.nicolas.Chapter23;
+import de.nicolas.Chapter23Test;
 import de.nicolas.Main;
 
 /** Launches the desktop (LWJGL3) application. */
@@ -14,7 +15,7 @@ public class Lwjgl3Launcher {
     }
 
     private static Lwjgl3Application createApplication() {
-        return new Lwjgl3Application(new Chapter23(), getDefaultConfiguration());
+        return new Lwjgl3Application(new Chapter23Test(), getDefaultConfiguration());
     }
 
     private static Lwjgl3ApplicationConfiguration getDefaultConfiguration() {
