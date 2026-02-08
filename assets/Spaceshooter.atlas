@@ -1,0 +1,38 @@
+Spaceshooter.png
+size: 256, 888
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+pma: false
+black
+  bounds: 0, 632, 256, 256
+playerShip1_green
+  bounds: 0, 332, 99, 75
+playerShip1_orange
+  bounds: 99, 332, 99, 75
+playerShip1_red
+  bounds: 0, 407, 99, 75
+playerShip2_blue
+  bounds: 99, 407, 112, 75
+playerShip2_green
+  bounds: 0, 482, 112, 75
+playerShip2_orange
+  bounds: 112, 482, 112, 75
+playerShip2_red
+  bounds: 0, 557, 112, 75
+playerShip3_blue
+  bounds: 0, 182, 98, 75
+playerShip3_green
+  bounds: 98, 182, 98, 75
+playerShip3_orange
+  bounds: 0, 257, 98, 75
+playerShip3_red
+  bounds: 98, 257, 98, 75
+ufoBlue
+  bounds: 0, 0, 91, 91
+ufoGreen
+  bounds: 91, 0, 91, 91
+ufoRed
+  bounds: 0, 91, 91, 91
+ufoYellow
+  bounds: 91, 91, 91, 91
