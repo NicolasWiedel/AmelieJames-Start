@@ -1,0 +1,41 @@
+test.png
+size: 256, 644
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+pma: false
+bg_castle
+  bounds: 0, 0, 256, 256
+p1_walk
+  bounds: 0, 256, 72, 97
+  index: 1
+p1_walk
+  bounds: 72, 256, 72, 97
+  index: 2
+p1_walk
+  bounds: 144, 256, 72, 97
+  index: 3
+p1_walk
+  bounds: 0, 353, 72, 97
+  index: 4
+p1_walk
+  bounds: 72, 353, 72, 97
+  index: 5
+p1_walk
+  bounds: 144, 353, 72, 97
+  index: 6
+p1_walk
+  bounds: 0, 450, 72, 97
+  index: 7
+p1_walk
+  bounds: 72, 450, 72, 97
+  index: 8
+p1_walk
+  bounds: 144, 450, 72, 97
+  index: 9
+p1_walk
+  bounds: 0, 547, 72, 97
+  index: 10
+p1_walk
+  bounds: 72, 547, 72, 97
+  index: 11
