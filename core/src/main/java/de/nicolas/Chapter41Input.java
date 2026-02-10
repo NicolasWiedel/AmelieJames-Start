@@ -45,24 +45,20 @@ public class Chapter41Input extends ApplicationAdapter {
         // Check for touch input (mobile/desktop)
         if (Gdx.input.isTouched()){
             int touchX = Gdx.input.getX();
-            int touchY = Gdx.input.getY();
+            int touchY = Gdx.graphics.getHeight() - Gdx.input.getY();
 
             // move the sprite towards the touchpoint
             if (touchX > playerSprite.getX() + playerSprite.getWidth() / 2f){
                 playerSprite.translateX(playerSpeed * deltaTime);
-                Gdx.app.log("touchX: " + touchX, "playerSpriteX: " + playerSprite.getX() + playerSprite.getWidth() / 2f);
             }
             if (touchX < playerSprite.getX() + playerSprite.getWidth() / 2f) {
                 playerSprite.translateX(-playerSpeed * deltaTime);
-                Gdx.app.log("touchX: " + touchX, "playerSpriteX: " + playerSprite.getX() + playerSprite.getWidth() / 2f);
             }
             if (touchY > playerSprite.getY() + playerSprite.getHeight() / 2f){
-                playerSprite.translateY(-playerSpeed * deltaTime);
-                Gdx.app.log("touchY: " + touchY, "playerSpriteY: " + playerSprite.getY() + playerSprite.getHeight() / 2f);
+                playerSprite.translateY(playerSpeed * deltaTime);
             }
             if (touchY < playerSprite.getY() + playerSprite.getHeight() / 2f){
-                playerSprite.translateY(playerSpeed * deltaTime);
-                Gdx.app.log("touchY: " + touchY, "playerSpriteY: " + playerSprite.getY() + playerSprite.getHeight() / 2f);
+               playerSprite.translateY(-playerSpeed * deltaTime);
             }
         }
 
