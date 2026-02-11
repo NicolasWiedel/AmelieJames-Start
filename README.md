@@ -1,4 +1,8 @@
 # AmelieJames-Start
+All Assets are from the Kenny assets
+
+The coin is produced by galangpiliang over opengameart.org
+
 
 A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
 
