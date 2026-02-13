@@ -14,6 +14,10 @@ public class Chapter43ExerciseInput extends ApplicationAdapter {
     private SpriteBatch batch;
     private Sprite playerSprite;
 
+    private float touchX = 0;
+    private float touchY = 0;
+    private float worldTouchY = 0;
+
     @Override
     public void create() {
         batch = new SpriteBatch();
@@ -28,11 +32,14 @@ public class Chapter43ExerciseInput extends ApplicationAdapter {
     public void render() {
         // check for mouse/touch input
         if (Gdx.input.isTouched()){
+
             // get raw screen coordinates
-            float touchX = Gdx.input.getX();
-            float touchY = Gdx.input.getY();
+            touchX = Gdx.input.getX();
+            touchY = Gdx.input.getY();
             // convert screen coordinates (top left) to world coordinates (bottom left)
-            float worldTouchY = Gdx.graphics.getHeight() - touchY;
+            worldTouchY = Gdx.graphics.getHeight() - touchY;
+
+            Vector2 playerPosition = new Vector2(playerSprite.getX(), playerSprite.getY());
 
             // update the sprite position to the new coordinates
             playerSprite.setPosition(touchX - playerSprite.getWidth() / 2,
@@ -40,13 +47,18 @@ public class Chapter43ExerciseInput extends ApplicationAdapter {
 
             // calculate the angle between sprites new position and touch point
             // we use new position and a point slightly offset to find the direction vector
-            Vector2 playerPosition = new Vector2(playerSprite.getX(), playerSprite.getY());
+
             Vector2 touchPosition = new Vector2(touchX, worldTouchY);
             // calculate the angle in radians from the direction vector
             float angle = MathUtils.atan2(touchPosition.y - playerPosition.y,
                 touchPosition.x - playerPosition.x);
             // convert radians to degrees and adjust by 90° to align with sprites default orientation
             float rotation = angle * MathUtils.radDeg;
+            Gdx.app.log("playerPosition", "playerPosition: " + playerPosition);
+            Gdx.app.log("touch", "touch: " + touchPosition);
+            Gdx.app.log("radians", "angle: " + angle);
+            Gdx.app.log("radDeg", "rotation: " + rotation);
+
             playerSprite.setRotation(rotation);
         }
 
